@@ -2,7 +2,6 @@ class Pfw < Formula
   desc "CLI for the Point-Free Way"
   homepage "https://github.com/pointfreeco/pfw"
   url "https://github.com/pointfreeco/pfw/archive/refs/tags/0.0.1.tar.gz"
-  version "0.0.1"
 
   sha256 "11763010328ece094b20ef74bb55603eae5db9a072d49fd634985f6fbd08c162"
 
