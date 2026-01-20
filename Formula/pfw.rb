@@ -1,16 +1,28 @@
 class Pfw < Formula
-  desc "The Point-Free Way CLI"
+  desc "CLI for the Point-Free Way"
   homepage "https://github.com/pointfreeco/pfw"
   url "https://github.com/pointfreeco/pfw-cli/archive/refs/heads/main.tar.gz"
   version "0.0.1"
 
-  sha256 "a9ddcbf5df7ee9adbb39a99919b757c19bd35eae752c7faf0f30a3cfc8c1f885"
+  sha256 "a39320e739369e9958176d47cb17dd1da42a2e072d4d44d8c0860a06a9cd9f32"
+
+  depends_on xcode: ["16.0", :build]
+
+  uses_from_macos "swift" => :build
 
   def install
-    system "swift", "build",
+    args = if OS.mac?
+      ["--disable-sandbox"]
+    else
+      ["--static-swift-stdlib"]
+    end
+    system "swift", "build", *args,
       "--configuration", "release",
-      "--disable-sandbox"
-
+      "--product", "pfw"
     bin.install ".build/release/pfw"
+  end
+
+  test do
+    assert_match(version.to_s, shell_output("#{bin}/pfw --version"))
   end
 end
