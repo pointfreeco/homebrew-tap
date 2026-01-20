@@ -3,7 +3,7 @@ class Pfw < Formula
   homepage "https://github.com/pointfreeco/pfw"
   url "https://github.com/pointfreeco/pfw/archive/refs/tags/0.0.1.tar.gz"
 
-  sha256 "11763010328ece094b20ef74bb55603eae5db9a072d49fd634985f6fbd08c162"
+  sha256 "0fe2b206bdeec050a942281cb5f6b527f539a2ae7e7b2ae9406620fa639f36e0"
 
   depends_on xcode: ["16.0", :build]
 
