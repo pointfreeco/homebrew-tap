@@ -4,7 +4,7 @@ class Pfw < Formula
   url "https://github.com/pointfreeco/pfw-cli/archive/refs/heads/main.tar.gz"
   version "0.0.1"
 
-  sha256 "a39320e739369e9958176d47cb17dd1da42a2e072d4d44d8c0860a06a9cd9f32"
+  sha256 "11763010328ece094b20ef74bb55603eae5db9a072d49fd634985f6fbd08c162"
 
   depends_on xcode: ["16.0", :build]
 
