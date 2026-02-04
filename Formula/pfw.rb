@@ -1,14 +1,9 @@
 class Pfw < Formula
   desc "CLI for the Point-Free Way"
   homepage "https://github.com/pointfreeco/pfw"
-  url "https://github.com/pointfreeco/pfw/archive/refs/tags/0.0.6.tar.gz"
+  url "https://github.com/pointfreeco/pfw/archive/refs/tags/0.0.7.tar.gz"
 
-  sha256 "7f438942ffc8689a364ce1358cffa1d93e3509adc78a0333fb5c76d5e9dd3167"
-
-  bottle do
-    root_url "https://github.com/pointfreeco/homebrew-tap/releases/download/pfw-0.0.6"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe: "ddf60cae3adbffeb9b623f56b04148f076991e87d99ce5ea2fd0c44625a3e10c"
-  end
+  sha256 "f78b3196831bdaec10021c351eb832589491e5eba076e64f5c1b8b8e6fcc3333"
 
   depends_on xcode: ["16.0", :build]
 
