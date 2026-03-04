@@ -5,6 +5,11 @@ class Pfw < Formula
 
   sha256 "9d480498334735c92bbd444fe8239466f6da8204839820cb54278447ba20b0e8"
 
+  bottle do
+    root_url "https://github.com/pointfreeco/homebrew-tap/releases/download/pfw-0.0.8"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "c6b55dd4885d38bb81f4e93d9a67005a7ef9a65299b8a521100fed171eee96e2"
+  end
+
   depends_on xcode: ["16.0", :build]
 
   uses_from_macos "swift" => :build
