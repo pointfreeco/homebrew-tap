@@ -33,10 +33,9 @@ jobs:
 
       - run: brew test-bot --only-cleanup-before
 
-      - name: Clean Homebrew Core
-        run: git -C "$(brew --repository homebrew/core)" clean -df && git -C "$(brew --repository homebrew/core)" reset --hard HEAD
-
       - run: brew test-bot --only-setup
+        env:
+          HOMEBREW_NO_REQUIRE_TAP_TRUST: 1
 
       - run: brew test-bot --only-tap-syntax
       - run: brew test-bot --only-formulae
